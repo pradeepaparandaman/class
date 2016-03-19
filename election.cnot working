@@ -1,0 +1,60 @@
+#include<stdio.h>
+int main()
+{        
+	int i,n,v,opt[10],j=0,k=0,vote[10],fake[10];
+	char ch,can[10][10];
+	printf("enter the no of candidates\n");
+	scanf("%d",&n);
+	printf("enter the names of parties\n");
+	for(i=0;i<n;i++)
+	{	
+		scanf("%s",can[i]);
+	}
+	printf("enter the no of voters\n");
+	scanf("%d",&v);
+	while(v>0)
+	{
+		printf("do u want to vote?");
+		scanf("%c",&ch);
+		switch(ch)
+		{
+			case 'y':printf("chose any one of the party");
+					for(i=0;i<n;i++)
+					{	
+						printf("%d.%s",(i+1),can[i]);
+					}
+					printf("%d.quit",n+1);
+				for(i=0;i<n;i++)
+					{
+						printf("hjfvhvhv");
+						scanf("%d",&opt[i]);
+					}
+						for(j=0;j<n;j++)
+						{
+						vote[j]=opt[0];
+						}
+					for(i=1;i<n;i++)
+					{				
+					if(opt[i]==n+1)
+						{
+						break;
+						}
+						else
+						{
+						fake[k]	=opt[i];
+						k++;
+						}
+					}
+						
+						break;
+		    case 'n':printf(".....");
+						break;
+		}
+		v--;
+	}
+	for(i=0;i<v;i++)
+	{
+		printf("%d\t",opt[i]);
+	}
+	printf("%d",k);
+}
